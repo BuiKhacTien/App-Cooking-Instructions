@@ -38,6 +38,12 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 15,
     borderBottomRightRadius: 15,
   },
+  textEmpty: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 50,
+    textAlign: 'center',
+  },  
 });
 
 export default styles;

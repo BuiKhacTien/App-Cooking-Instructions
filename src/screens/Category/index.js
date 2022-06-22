@@ -10,10 +10,13 @@ import React, {useEffect} from 'react';
 import styles from './styles';
 import Product from '../../components/Product';
 import {PRODUCTS} from '../../contains/data';
+import { useDispatch } from 'react-redux';
+import { addNewProductView } from '../../store/slices/viewed';
+
 const CategoryScreen = ({route, navigation}) => {
   const {categoryId} = route.params;
   const productData = PRODUCTS.filter(item => item.categoryId === categoryId);
-
+  const dispatch = useDispatch()
   const renderProduct = ({item}) => {
     return (
       <Product
@@ -23,6 +26,7 @@ const CategoryScreen = ({route, navigation}) => {
             item: item,
             title: item.title,
           });
+          dispatch(addNewProductView({id: item.id}))
         }}
       />
     );

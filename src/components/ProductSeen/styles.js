@@ -39,6 +39,12 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 15,
     marginBottom: 5,
   },
+  textEmpty: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 50,
+    textAlign: 'center',
+  }, 
 });
 
 export default styles;

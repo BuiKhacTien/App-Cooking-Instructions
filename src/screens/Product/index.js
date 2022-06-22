@@ -21,6 +21,7 @@ const ProductScreen = ({route}) => {
 
   return (
     <View style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <ImageBackground source={data.thumb} style={styles.backgroundImage}>
         <View style={styles.containerIcon}>
           <View style={styles.boxIconHeart}>
@@ -33,7 +34,6 @@ const ProductScreen = ({route}) => {
           </View>
         </View>
       </ImageBackground>
-      <ScrollView>
         <ImageBackground
           blurRadius={0}
           source={{
